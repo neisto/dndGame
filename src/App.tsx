@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-// import { useState } from 'react'
 
 import './App.css'
 import Card from './components/Card/Card.tsx'
@@ -13,55 +12,24 @@ import CardInfo from './components/Card/CardInfo.tsx';
 
 
 function App() {
+    // localStorage.clear()
+    const dataStart = JSON.parse(localStorage.getItem('массив') || null)
+    console.log(dataStart);
+    
+    dataStart === null ? localStorage.setItem('массив', JSON.stringify(DefaultCards())) : false
+
     //ЕСЛИ ОШИБКА - РАСКОММЕНТИРОВАТЬ здесь и перезагрузить страницу, ЧТОБЫ ЗАДАТЬ СТАРТОВЫЙ НАБОР, без этого не запустится!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // localStorage.setItem('массив', JSON.stringify(DefaultCards()));
-  // состояние - номер текущей карточки 
+    // localStorage.setItem('массив', JSON.stringify(DefaultCards()))
 
-  const [_cards, setCards] = useState([]);
-
-  const [numCurrentPlayer, setNumCurrentPlayer] = useState(parseInt(findIndexByCurrent()))
-  // console.log(numCurrentPlayer + ' Текущий номер');
-
-  // Индекс текущего игрока
-  const [indexPlayer, setindexPlayer] = useState(findIndexByIdUsingMap(numCurrentPlayer))
-  // console.log(indexPlayer+1 + ' ИД игрока');
-
-  const [isRace, setIsRace] = useState(descript())
-
-  // состояние попап кнопки инфо
-  const [inf, setIsInf] = useState(false)
-
-
-  //смена страниц
-  const [tab, setTab] = useState(JSON.parse(localStorage.getItem('массив') || '[]')[0].tab)
-  // setTab(JSON.parse(localStorage.getItem('массив') || '[]')[0].tab)
-  //наведение на кнопку вызовет всплывабщее окно
-  const [isDel, setIsDel] = useState(false);
-
-  //статус модалки от кнопки обновить
-  const [isRefresh, setIsRefresh] = useState(false);
-
-  //статус модалки от кнопки показать всех
-  const [isAll, setIsAll] = useState(false);
-
-  useEffect(() => {
-    const localData = localStorage.getItem('массив');
-    let initialData;
-    
-    if (!localData) {
-        initialData = DefaultCards();
-        initialData[0].tab = 'welcome';
-        localStorage.setItem('массив', JSON.stringify(initialData));
-    } else {
-        initialData = JSON.parse(localData);
-    }
-    
-    setCards(initialData);
-    setTab(initialData[0].tab);
-    setNumCurrentPlayer(initialData[0].current);
-    setindexPlayer(findIndexByIdUsingMap(numCurrentPlayer));
-    setIsRace(descript());
-}, []);
+    // useEffect(() => {
+    //   // Проверяем, есть ли уже данные в localStorage
+    //   if (!localStorage.getItem('массив')) {
+    //     // Если нет - записываем начальные данные
+    //     const defaultData = DefaultCards();
+    //     defaultData[0].tab = 'welcome'; // Устанавливаем welcome tab для первого запуска
+    //     localStorage.setItem('массив', JSON.stringify(defaultData));
+    //   }
+    // }, []);
 
 
 
@@ -81,6 +49,31 @@ function App() {
   const data = JSON.parse(localStorage.getItem('массив') || '[]')
   return data[0].current
   }
+  // состояние - номер текущей карточки 
+  const [numCurrentPlayer, _setNumCurrentPlayer] = useState(parseInt(findIndexByCurrent()))
+  // console.log(numCurrentPlayer + ' Текущий номер');
+
+  // Индекс текущего игрока
+  const [indexPlayer, _setindexPlayer] = useState(findIndexByIdUsingMap(numCurrentPlayer))
+  // console.log(indexPlayer+1 + ' ИД игрока');
+
+  const [isRace, _setIsRace] = useState(descript())
+
+  // состояние попап кнопки инфо
+  const [inf, setIsInf] = useState(false)
+
+
+  //смена страниц
+  const [tab, setTab] = useState(JSON.parse(localStorage.getItem('массив') || '[]')[0].tab)
+  // setTab(JSON.parse(localStorage.getItem('массив') || '[]')[0].tab)
+  //наведение на кнопку вызовет всплывабщее окно
+  const [isDel, setIsDel] = useState(false);
+
+  //статус модалки от кнопки обновить
+  const [isRefresh, setIsRefresh] = useState(false);
+
+  //статус модалки от кнопки показать всех
+  const [isAll, setIsAll] = useState(false);
 
   function descript():any {
     // Устанавливаем начальное состояние для описания
@@ -93,7 +86,6 @@ function App() {
   }
 
   
-
   return (
     <>
       {tab === 'welcome' && (
