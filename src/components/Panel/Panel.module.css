@@ -1,0 +1,130 @@
+.sidenav {
+    height: 500px;
+    width: 200px;
+    position: fixed;
+    z-index: 2;
+    top: 223px;
+    left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    justify-content: start;
+    padding: 117px 0 0 25px;
+  }
+
+
+button {
+    padding: 25px;
+    /* background-color: #tr; */
+    color: white;
+    border: none;
+    font-size: 31px;
+    height: 100px;
+    width: 100px;
+    /* box-shadow: 0 2px 4px darkslategray; */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: transparent;
+  }
+
+  button {
+    margin-right: 30px;
+    border-radius: 70%;
+  }
+
+  .ref {
+    width: 125px;
+    height: 129px;
+    background: url("/src/components/Panel/img/ref.png") center/cover no-repeat;
+    position: relative;
+    top: -48px;
+    left: -34px;
+    transition: 1s;
+  }
+
+  .ref:hover {
+    transform: scale(1.2);
+
+  }
+  
+  .del {
+    width: 146px;
+    height: 127px;
+    background: url('/src/components/Panel/img/del.png') center/cover no-repeat;
+    position: relative;
+    top: -37px;
+    left: -45px;
+    transition: 1s;
+
+  }
+
+  .del:hover {
+    transform: scale(1.2);
+
+  }
+  
+  .panel_li_cont {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .popup {
+    padding: 10px;
+    position: absolute;
+    color: white;
+    font-family: "Rock Salt", cursive;
+    z-index: 100;
+    left: calc(100% + 20px); /* Отступ справа от элемента на 50px */
+    border-radius: 15px;
+    border: solid 2px rgba(34, 15, 15, 0.192);
+    box-shadow: 3px 10px 20px rgb(0, 0, 0), -5px -10px 20px rgb(0, 0, 0);
+  } 
+
+  
+  .popRef {
+    top: 120px;
+    width: 200px;
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.075), rgba(121, 112, 101, 0.199));
+  }
+
+  .popDel {
+    top: 340px;
+    width: 200px;
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.623), rgba(121, 112, 101, 0.815));
+  }
+
+  .buttonInfo {
+    width: 170px;
+    height: 137px;
+    background: url('../Panel/img/save.png') center/cover no-repeat;
+    position: relative;
+    top: -37px;
+    left: -45px;
+    position: fixed;
+    top: 760px;
+    left: 26px;
+    z-index: 999;
+    transform: scale(-1, 1);
+    transition: 1s;
+    background-color: transparent;
+
+} 
+
+.buttonInfo:hover {
+    transform: scale(-1.2, 1.2);
+
+} 
+
+.popInf {
+  top: 590px;
+  width: 200px;
+  background: linear-gradient(to top left, rgba(40, 43, 23, 0.075), rgba(121, 112, 101, 0.199));
+}
+
+.btnOpenDescription {
+  width: 170px;
+  height: 137px;
+  background-color: aqua;
+}

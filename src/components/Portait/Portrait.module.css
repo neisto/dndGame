@@ -1,0 +1,232 @@
+
+.portrait {
+    width: 292px;
+    height: 300px;
+    position: relative;
+    left: 90px;
+    top: 62px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    border: solid 10px rgba(170, 169, 163, 0.13);
+    box-shadow: 5px 10px 20px rgba(166, 150, 150, 0.84), -5px -10px 20px rgba(255,255,255,0.5);
+    margin-bottom: 104px;
+}
+
+.portrait_mini {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 45px;
+    top: 62px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    border: solid 10px rgba(170, 169, 163, 0.13);
+    /* box-shadow: 5px 10px 20px rgba(166, 150, 150, 0.84), -5px -10px 20px rgba(255,255,255,0.5); */
+    margin-bottom: 104px;
+}
+
+.human {
+    background: url(./img/hum.jpg)  center/cover no-repeat;
+    background-size: 500px;
+}
+.gob {
+    background: url(./img/gob.jpg)  center/cover no-repeat;
+    background-size: 330px;
+}
+.had {
+    background: url(./img/had.jpg)  center/cover no-repeat;
+    background-size: 533px;
+}
+.vamp {
+    background: url(./img/vamp.jpg)  center/cover no-repeat;
+    background-size: 300px;
+}
+.kent {
+    background: url(./img/kent.jpg)  center/cover no-repeat;
+    background-size: 438px 317px;
+}
+.uruk {
+    background: url(./img/uruk.jpg)  center/cover no-repeat;
+    background-size: 330px;
+}
+.elf {
+    background: url(./img/elf.jpg)  center/cover no-repeat;
+    background-size: 431px;
+}
+.polu {
+    background: url(./img/polu.jpg)  center/cover no-repeat;
+    background-size: 330px;
+}
+.dwarf {
+    background: url(./img/dwarf.jpg)  center/cover no-repeat;
+    background-size: 330px;
+}
+.tif {
+    background: url(./img/tif.jpg)  center/cover no-repeat;
+    background-size: 310px;
+    transform: scale(-1, 1);
+}
+.gom {
+    background: url(./img/gom.jpg)  center/cover no-repeat;
+    background-size: 330px;
+}
+.poluelf {
+    background: url(./img/poluelf.jpg)  center/cover no-repeat;
+    background-size: 310px;
+    transform: scale(-1, 1);
+}
+
+.humanw {
+    background: url(./img/humW.jpg)  center/cover no-repeat;
+    background-size: 330px;
+}
+.gobw {
+    background: url(./img/gobW.jpg)  center/cover no-repeat;
+    background-size: 330px;
+    transform: scale(-1, 1);
+
+}
+.hadw {
+    background: url(./img/hadW.jpg)  center/cover no-repeat;
+    background-size: 533px;
+}
+.vampw {
+    background: url(./img/vampW.jpg)  center/cover no-repeat;
+    background-size: 300px;
+}
+.kentw {
+    background: url(./img/kentW.jpg)  center/cover no-repeat;
+    background-size: 317px;
+}
+.urukw {
+    background: url(./img/urukW.jpg)  center/cover no-repeat;
+    background-size: 300px;
+}
+.elfw {
+    background: url(./img/elfW.jpg)  center/cover no-repeat;
+    background-size: 431px;
+}
+.poluw {
+    background: url(./img/poluW.jpg)  center/cover no-repeat;
+    background-size: 330px;
+}
+.dwarfw {
+    background: url(./img/dwarfW.jpg)  center/cover no-repeat;
+    background-size: 330px;
+}
+.tifw {
+    background: url(./img/tifW.jpg)  center/cover no-repeat;
+    background-size: 280px;
+}
+.gomw {
+    background: url(./img/gom.jpg)  center/cover no-repeat;
+    background-size: 330px;
+}
+.poluelfw {
+    background: url(./img/poluelfW.jpg)  center/cover no-repeat;
+    background-size: 330px;
+    transform: scale(-1, 1);
+}
+
+.human1 {
+    background: url(./img/hum.jpg)  center/cover no-repeat;
+    background-size: 340px;
+}
+.gob1 {
+    background: url(./img/gob.jpg)  center/cover no-repeat;
+    background-size: 230px;
+}
+.had1 {
+    background: url(./img/had.jpg)  center/cover no-repeat;
+    background-size: 370px;
+}
+.vamp1 {
+    background: url(./img/vamp.jpg)  center/cover no-repeat;
+    background-size: 230px;
+}
+.kent1 {
+    background: url(./img/kent.jpg)  center/cover no-repeat;
+    background-size: 338px 237px;
+}
+.uruk1 {
+    background: url(./img/uruk.jpg)  center/cover no-repeat;
+    background-size: 220px;
+}
+.elf1 {
+    background: url(./img/elf.jpg)  center/cover no-repeat;
+    background-size: 331px;
+}
+.polu1 {
+    background: url(./img/polu.jpg)  center/cover no-repeat;
+    background-size: 330px;
+}
+.dwarf1 {
+    background: url(./img/dwarf.jpg)  center/cover no-repeat;
+    background-size: 230px;
+}
+.tif1 {
+    background: url(./img/tif.jpg)  center/cover no-repeat;
+    background-size: 230px;
+    transform: scale(-1, 1);
+}
+.gom1 {
+    background: url(./img/gom.jpg)  center/cover no-repeat;
+    background-size: 230px;
+}
+.poluelf1 {
+    background: url(./img/poluelf.jpg)  center/cover no-repeat;
+    background-size: 230px;
+    transform: scale(-1, 1);
+}
+
+.humanw1 {
+    background: url(./img/humW.jpg)  center/cover no-repeat;
+    background-size: 240px;
+}
+.gobw1 {
+    background: url(./img/gobW.jpg)  center/cover no-repeat;
+    background-size: 230px;
+    transform: scale(-1, 1);
+
+}
+.hadw1 {
+    background: url(./img/hadW.jpg)  center/cover no-repeat;
+    background-size: 333px;
+}
+.vampw1 {
+    background: url(./img/vampW.jpg)  center/cover no-repeat;
+    background-size: 230px;
+}
+.kentw1 {
+    background: url(./img/kentW.jpg)  center/cover no-repeat;
+    background-size: 217px;
+}
+.urukw1 {
+    background: url(./img/urukW.jpg)  center/cover no-repeat;
+    background-size: 230px;
+}
+.elfw1 {
+    background: url(./img/elfW.jpg)  center/cover no-repeat;
+    background-size: 331px;
+}
+.poluw1 {
+    background: url(./img/poluW.jpg)  center/cover no-repeat;
+    background-size: 230px;
+}
+.dwarfw1 {
+    background: url(./img/dwarfW.jpg)  center/cover no-repeat;
+    background-size: 260px;
+}
+.tifw1 {
+    background: url(./img/tifW.jpg)  center/cover no-repeat;
+    background-size: 230px;
+}
+.gomw {
+    background: url(./img/gom.jpg)  center/cover no-repeat;
+    background-size: 230px;
+}
+.poluelfw1 {
+    background: url(./img/poluelfW.jpg)  center/cover no-repeat;
+    background-size: 230px;
+    transform: scale(-1, 1);
+}

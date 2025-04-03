@@ -1,0 +1,52 @@
+.healthBar {
+    position: relative;
+    width: 290px;
+    margin: 20px;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    border-radius: 5px;
+    position: relative;
+    height: 26px;
+    margin-bottom: 60px;
+}
+
+.bar {
+    height: 32px;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.281), rgb(139, 16, 16)); 
+    transition: width 0.3s;
+    position: absolute;
+    top: -28px;
+    left: 0;
+}
+
+.hBar {
+    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.342);
+    font-size: 18px;
+    position: absolute;
+    width: 300px;
+    height: 621px;
+    top: -39px;
+    left: -4px;
+    font-family: "Rock";
+    z-index: 999;
+    -moz-user-select:none; /* Firefox */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE */
+    user-select: none;
+    font-family: "Rock Salt", cursive;
+}
+
+.hBar:hover {
+    color: #fff;
+
+}
+
+.hBar:hover ~ .healthBar {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.hBar:hover ~ .bar {
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(139, 16, 16)); 
+}
+

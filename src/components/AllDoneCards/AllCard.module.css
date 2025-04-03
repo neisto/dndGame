@@ -1,0 +1,286 @@
+
+
+.finish_card {
+    width: 300px;
+    height: 470px;
+    margin: 0 auto;
+    padding: 10px;
+    /* background: linear-gradient(to top left, rgba(40, 43, 23, 0.54), rgb(121, 112, 101)); */
+    background-color: white;
+    border-radius: 56px;
+    border: solid 4px rgba(34, 15, 15, 0.5);
+    box-shadow: 5px 10px 20px rgb(0, 0, 0), -5px -10px 20px rgb(0, 0, 0);
+    position: relative;
+    cursor: pointer;
+}
+
+.finish_cardOff {
+    width: 310px;
+    height: 520px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: black000;
+    background-image: url('../img/diceOff.png'); 
+    background-position: center; 
+    background-size: 200px;
+    background-repeat: no-repeat;
+    border-radius: 56px;
+    border: solid 4px rgba(34, 15, 15, 0.5);
+    box-shadow: 5px 10px 20px rgb(0, 0, 0), -5px -10px 20px rgb(0, 0, 0);
+    position: relative;
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.scale:hover {
+    transition: transform 0.7s ease
+}
+
+.scale:hover {
+    transform: scale(1.2);
+    transition: transform 1s ease;
+}
+
+.scale:not(:hover) {
+    transition: transform 1s ease;
+}
+
+.table {
+    height: 553px;
+    width: 1588px;
+    padding: 140px 0 0 250px;
+    background-color: linear-gradient(to top left, rgb(154, 241, 255), rgb(185, 106, 10));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.charRoundFinalCard{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto; 
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    -moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    font-size: 17px;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.charRoundFinalCardChar {
+    background: radial-gradient(farthest-side ellipse at top left, rgb(30, 71, 106), #27629a);
+}
+
+.charRoundFinalCardPlut {
+    background: radial-gradient(farthest-side ellipse at top left, rgba(202, 26, 26, 0.96), #700606de);
+}
+
+.charRoundFinalCardBard {
+    background: radial-gradient(farthest-side ellipse at top left, #432d59, #695280);
+}
+
+.charRoundFinalCardWar {
+    background: radial-gradient(farthest-side ellipse at top left, #c68e40d6, #9d6d1b);
+}
+
+
+.r1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.r2 {
+    position: absolute;
+    top: 20px;
+    left: 245px;
+}
+
+.r3 {
+    position: absolute;
+    top: 280px;
+    left: 18px;
+}
+
+.r4 {
+    position: absolute;
+    top: 280px;
+    left: 243px;
+}
+
+.modify {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background-color: #d3d3d30a; 
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #020202;
+    margin: 0;
+    font-size: 22px;
+}
+
+.m1 {
+    position: absolute;
+    top: 20px;
+    left: 78px;
+}
+
+
+.m2 {
+    position: absolute;
+    top: 20px;
+    left: 190px;
+}
+
+.m3 {
+    position: absolute;
+    top: 282px;
+    left: 80px;
+}
+
+.m4 {
+    position: absolute;
+    top: 282px;
+    left: 190px;
+}
+
+.informationBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+    gap: 200px;
+    font-family: "Rock Salt", cursive;
+    font-size: 21px;
+    color: black;
+}
+
+.labelCharTop {
+    position: absolute;
+    font-family: "Rock Salt", cursive;
+    font-size: 19px;
+    color: black;
+    top: 56px;
+    left: 13px;
+}
+.labelCharDown {
+    position: absolute;
+    font-family: "Rock Salt", cursive;
+    font-size: 19px;
+    color: black;
+    top: -30px;
+    left: 13px;
+}
+
+.informationBlocks{
+    position: absolute;
+    width: 230px;
+    height: 30px;
+    border-color: rgb(43, 43, 43);
+    border-width: 5px;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    z-index: 999;
+    margin-bottom: 16px;
+    margin-top: 31px;
+    top: -84px;
+    color: white;
+    font-size: 30px;
+}
+
+.txtChar {
+    font-size: 23px;
+    color: whitefff;
+    text-align: center;
+    text-align-last: center;
+    margin: 0;
+    font-family: "Taring";
+    
+
+}
+
+.levitate0 {
+    animation: levitate-animation 1.5s ease-in-out infinite alternate;
+    transform-origin: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translate3d(0, 0, 0);
+}
+
+.levitate1 {
+    animation: levitate-animation 1.6s ease-in-out infinite alternate;
+    transform-origin: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translate3d(0, 0, 0);
+}
+
+.levitate2 {
+    animation: levitate-animation 1.4s ease-in-out infinite alternate;
+    transform-origin: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translate3d(0, 0, 0);
+}
+
+.levitate3 {
+    animation: levitate-animation 1.3s ease-in-out infinite alternate;
+    transform-origin: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translate3d(0, 0, 0);
+}
+
+.levitate4 {
+    animation: levitate-animation 1.4s ease-in-out infinite alternate;
+    transform-origin: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translate3d(0, 0, 0);
+}
+
+
+@keyframes levitate-animation {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, -17px, 0);
+    }
+}
+
+.classesImg {
+    position: relative;
+    width: 151px;
+    height: 150px;
+    top: -9px;
+    /* top: -295px;
+    width: 269px;
+    height: 267px; */
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.63), -5px -10px 20px rgba(255,255,255,0.5);
+}
+
+.classesImg1 {
+    background: url(../img/war.jpg) center/cover no-repeat;
+}
+
+
+.classesImg2 {
+    background: url(../img/plut.jpg) center/cover no-repeat;
+}
+
+.classesImg3 {
+    background: url(../img/char.jpg) center/cover no-repeat;
+}
+.classesImg4 {
+    background: url(../img/bard.jpg) center/cover no-repeat;
+}
