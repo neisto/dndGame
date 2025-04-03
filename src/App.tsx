@@ -17,7 +17,7 @@ function App() {
     // localStorage.setItem('массив', JSON.stringify(DefaultCards()));
   // состояние - номер текущей карточки 
 
-  const [cards, setCards] = useState([]);
+  const [_cards, setCards] = useState([]);
 
   const [numCurrentPlayer, setNumCurrentPlayer] = useState(parseInt(findIndexByCurrent()))
   // console.log(numCurrentPlayer + ' Текущий номер');
