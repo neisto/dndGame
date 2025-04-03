@@ -1,5 +1,5 @@
+// import { useEffect, useState } from 'react'
 import { useState } from 'react'
-
 import './App.css'
 import Card from './components/Card/Card.tsx'
 import Panel from './components/Panel/Panel.tsx';
@@ -13,7 +13,7 @@ import CardInfo from './components/Card/CardInfo.tsx';
 
 function App() {
     // localStorage.clear()
-    const dataStart = JSON.parse(localStorage.getItem('массив') || null)
+    const dataStart = JSON.parse(localStorage.getItem('массив') || "null")
     console.log(dataStart);
     
     dataStart === null ? localStorage.setItem('массив', JSON.stringify(DefaultCards())) : false
