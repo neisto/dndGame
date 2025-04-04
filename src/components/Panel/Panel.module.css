@@ -34,7 +34,7 @@
     top: -37px;
     left: -45px;
     position: fixed;
-    top: 720px;
+    top: 730px;
     left: 47px;
     z-index: 999;
     transform: scale(-1, 1);
@@ -42,13 +42,13 @@
 } 
 
 .buttonInfo:focus{
-  outline: none;
-  border: none;
+    outline: none;
+    border: none;
 }
 
 .buttonInfo:active{
-  outline: none;
-  border: none;
+    outline: none;
+    border: none;
 }
 
   .del {
