@@ -1,5 +1,5 @@
 import classes from './Panel.module.css'
-import DefaultCards from '../DeafultCards.tsx'
+// import DefaultCards from '../DeafultCards.tsx'
 
 interface props {
   isRefresh?: any;
