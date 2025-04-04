@@ -49,6 +49,10 @@ function App() {
   const data = JSON.parse(localStorage.getItem('массив') || '[]')
   return data[0].current
   }
+
+  //смена страниц
+  const [tab, setTab] = useState(JSON.parse(localStorage.getItem('массив') || '[]')[0].tab)
+
   // состояние - номер текущей карточки 
   const [numCurrentPlayer, _setNumCurrentPlayer] = useState(parseInt(findIndexByCurrent()))
   // console.log(numCurrentPlayer + ' Текущий номер');
@@ -62,10 +66,6 @@ function App() {
   // состояние попап кнопки инфо
   const [inf, setIsInf] = useState(false)
 
-
-  //смена страниц
-  const [tab, setTab] = useState(JSON.parse(localStorage.getItem('массив') || '[]')[0].tab)
-  // setTab(JSON.parse(localStorage.getItem('массив') || '[]')[0].tab)
   //наведение на кнопку вызовет всплывабщее окно
   const [isDel, setIsDel] = useState(false);
 
