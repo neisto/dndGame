@@ -1,6 +1,4 @@
 Приложение для игры в DND, чтобы во время игры информация выводилась, например на телевизор и все изменения, в т.ч. ХП, фиксировались в нём.
 
-
-
-![Скриншот 04-04-2025 093217](https://github.com/user-attachments/assets/c5502926-e315-4e54-a15b-dade7ec68678)
-![Uploading image.png…]()
+![1](https://github.com/user-attachments/assets/d7babd33-4f3a-4095-9055-a9088bf1828e)
+![Uploading 2.jpg…]()
