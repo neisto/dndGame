@@ -1,6 +1,6 @@
 body {
-    cursor: url('../src/components/img/sword.png'), auto;
-
+    width: 100%;
+    height: 100%;
 }
 .rock    {
     font-family: "Rock Salt", cursive;
@@ -21,24 +21,24 @@ body {
   }
 
 .gameSection {
-    width: 1940px;
-    height: 1100px;
+    width: 100%;
+    height: 100%;
     background: url(../img/bg1.jpg) center/cover no-repeat;
     position: fixed;
     top: -4px;
-    left: -16px;
+    left: 0;
     z-index: 1;
     padding: 30px 0 0 0;
 
 }
 
 .gameSectionTwo {
-    width: 1940px;
-    height: 1100px;
+    width: 100%;
+    height: 100%;
     background: url(../img/bg4.jpg) center/cover no-repeat;
     position: fixed;
-    top: -4px;
-    left: -23px;
+    top: 0;
+    left: 0;
     z-index: 1;
     padding: 30px 0 0 0;
 
@@ -55,7 +55,25 @@ body {
     border: solid 4px rgba(34, 15, 15, 0.5);
     box-shadow: 5px 10px 20px rgb(0, 0, 0), -5px -10px 20px rgb(0, 0, 0);
     top: 20px;
+    transition: all 0.3s ease; /* Плавный переход при наведении */
 }
+
+.levitate {
+    animation: levitate-animation 1.5s ease-in-out infinite alternate;
+    transform-origin: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes levitate-animation {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, -17px, 0);
+    }
+}
+
 
 .cardWhenInfoOn {
     left: -185px;
@@ -65,27 +83,27 @@ body {
 .infoDisplay{
     z-index: 1;
     position: fixed;
-    left: -7px;
+    left: 0;
     height: 217px;
     border-radius: 5px;
-    height: 100vw;
+    height: 100%;
     top: 0;
     background: linear-gradient(to top left, rgba(40, 43, 23, 0), rgba(121, 112, 101, 0.41));
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.28), -5px -10px 20px rgba(0, 0, 0, 0.05);
     background: linear-gradient(to top left, rgb(0, 0, 0), rgb(0, 0, 0));
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.35), -5px -10px 20px rgb(0, 0, 0);
-    width: 1935px;
+    width: 100%;
     padding: 0;
 }
 
 .description_block {
-    width: 2186px;
-    height: 1173px;
+    width: 100%;
+    height: 100%;
     background:  url('/src/components/img/bginfo.jpg') center/cover no-repeat;
     box-shadow: inset 0px 0px 40px 40px black;
-    left: -8px;
+    left: 0px;
     position: fixed;
-    top: -76px;
+    top: 0;
 }
 
 
@@ -286,33 +304,15 @@ body {
     box-shadow: 3px 10px 20px rgb(0, 0, 0), -5px -10px 20px rgb(0, 0, 0);
 }
 
-.levitate {
-    animation: levitate-animation 1.5s ease-in-out infinite alternate;
-    transform-origin: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    transform: translate3d(0, 0, 0);
-}
-
-@keyframes levitate-animation {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-    100% {
-        transform: translate3d(0, -17px, 0);
-    }
-}
-
-
 .welcomeWindow {
     position: fixed;
     padding-top: 600px;
-    width: 1968px;
-    height: 671px;
-    background: url('../img/bg3.jpg') center/cover no-repeat;
+    width: 100%;
+    height: 26vw;
+    background:
+    url('/src/components/img/bg3.jpg') center/cover no-repeat;
     z-index: 999;
-    top: -100px;
-    left: -52px;
-    overflow: hidden;
-    
+    top: -5px;
+    left: 0;
   }
   

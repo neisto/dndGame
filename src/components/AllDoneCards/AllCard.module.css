@@ -32,9 +32,6 @@
     opacity: 70%;
 }
 
-.scale:hover {
-    transition: transform 0.7s ease
-}
 
 .scale:hover {
     transform: scale(1.2);
