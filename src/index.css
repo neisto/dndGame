@@ -52,19 +52,21 @@ h1 {
 }
 
 button {
+  border-radius: 8px;
+  border: 1px solid transparent;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: transparent;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
-
 button:hover {
   border-color: transparent;
 }
-
 button:focus,
 button:focus-visible {
-  /* outline: 4px auto -webkit-focus-ring-color; */
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
@@ -74,5 +76,8 @@ button:focus-visible {
   }
   a:hover {
     color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
   }
 }
