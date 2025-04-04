@@ -242,7 +242,7 @@ body {
    height: 142px;
    position: fixed;
    top: 82px;
-   left: 58px;
+   left: 60px;
    background: url('/src/components/Panel/img/all.png') center/cover no-repeat;
    z-index: 999;
    transition: all 1s ease;

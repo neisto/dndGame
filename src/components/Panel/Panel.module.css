@@ -3,7 +3,7 @@
     width: 200px;
     position: fixed;
     z-index: 2;
-    top: 223px;
+    top: 210px;
     left: 0;
     list-style: none;
     display: flex;
@@ -79,7 +79,7 @@
     left: -45px;
     position: fixed;
     top: 810px;
-    left: 46px;
+    left: 47px;
     z-index: 999;
     transform: scale(-1, 1);
     transition: 1s;
