@@ -54,21 +54,19 @@ h1 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
   background-color: transparent;
-  cursor: pointer;
   transition: transparent 0.25s;
 }
+
 button:hover {
   border-color: transparent;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto transparent;
+
+button:focus {
+  outline: 1px auto transparent;
 }
 
+/* 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -80,4 +78,4 @@ button:focus-visible {
   button {
     background-color: transparent;
   }
-}
+} */
