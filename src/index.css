@@ -59,14 +59,14 @@ button {
   font-family: inherit;
   background-color: transparent;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: transparent 0.25s;
 }
 button:hover {
   border-color: transparent;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto transparent;
 }
 
 @media (prefers-color-scheme: light) {
@@ -78,6 +78,6 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: transparent;
   }
 }
