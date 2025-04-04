@@ -3,7 +3,7 @@
     width: 200px;
     position: fixed;
     z-index: 2;
-    top: 207px;
+    top: 217px;
     left: 0;
     list-style: none;
     display: flex;
@@ -11,22 +11,20 @@
     gap: 93px;
     justify-content: start;
     padding: 80px 0 0 25px;
-  }
+}
 
-  .ref {
+.ref {
     width: 125px;
     height: 129px;
     background: url("/src/components/Panel/img/ref.png") center/cover no-repeat;
-    /* margin: 10px 20px 0 0; */
     transition: 1s;
-  }
+}
 
-  .ref:hover {
+.ref:hover {
     transform: scale(1.2);
+}
 
-  }
-
-  .buttonInfo {
+.buttonInfo {
     width: 165px;
     height: 169px;
     background: url('../Panel/img/save.png') center/cover no-repeat;
@@ -39,38 +37,35 @@
     z-index: 999;
     transform: scale(-1, 1);
     transition: 1s;
-} 
+}
 
-.buttonInfo:focus{
+uttonInfo:focus{
     outline: none;
     border: none;
 }
 
-.buttonInfo:active{
+  uttonInfo:active{
     outline: none;
     border: none;
 }
 
-  .del {
+.del {
     width: 146px;
     height: 127px;
     background: url('/src/components/Panel/img/del.png') center/cover no-repeat;
     transition: 1s;
-
-  }
-
-  .del:hover {
+}
+.del:hover {
     transform: scale(1.2);
+}
 
-  }
-  
-  .panel_li_cont {
+.panel_li_cont {
     padding: 10px;
     border: 1px solid #ccc;
     cursor: pointer;
-  }
-  
-  .popup {
+}
+
+.popup {
     padding: 10px;
     position: absolute;
     color: white;
@@ -80,22 +75,18 @@
     border-radius: 15px;
     border: solid 2px rgba(34, 15, 15, 0.192);
     box-shadow: 3px 10px 20px rgb(0, 0, 0), -5px -10px 20px rgb(0, 0, 0);
-  } 
+} 
 
-  
-  .popRef {
+.popRef {
     top: 120px;
     width: 200px;
     background: linear-gradient(to top left, rgba(40, 43, 23, 0.075), rgba(121, 112, 101, 0.199));
-  }
-
-  .popDel {
+}
+.popDel {
     top: 340px;
     width: 200px;
     background: linear-gradient(to top left, rgba(40, 43, 23, 0.623), rgba(121, 112, 101, 0.815));
-  }
-
-
+}
 .buttonInfo:hover {
     transform: scale(-1.2, 1.2);
 
