@@ -30,11 +30,6 @@ export default function AllCard(): JSX.Element {
 
     return (
         <>
-        {/* {objDoneCards.map((item) => (
-                
-        <div>
-                <HealthBar initialHealth={item.health} />
-        </div>))} */}
         <ul className={classes.table}>
             {objDoneCards.map((item:any, index:any) => (
                 
@@ -42,6 +37,7 @@ export default function AllCard(): JSX.Element {
                     <div>
                         <HealthBar current={item.id} initialHealth={item.health} />
                     </div>
+                    {item.health === 0 && (<div className={`${classes.finish_cardOff} ${classes[`levitate${index}`]}`}></div>)}
                     {item.health !== 0 && (<div className={`${classes.finish_card} ${classes[`levitate${index}`]}`}>
                     {item.sex === 'Мужчина' && (<PortaitMini newRace={item.race} sex={item.sex} />)}
                     {item.sex === 'Женщина' && (<PortaitMini newRace={item.racew} sex={item.sex} />)}
@@ -92,7 +88,6 @@ export default function AllCard(): JSX.Element {
                             <li className={`${classes.modify} ${classes.m4}`}><div> {item.Cmod} </div></li>
                         </ul>                    
                     </div>)}
-                    {item.health == 0 && (<div className={`${classes.finish_cardOff} ${classes[`levitate${index}`]}`}></div>)}
                 </li>
             ))}
         </ul>

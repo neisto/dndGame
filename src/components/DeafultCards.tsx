@@ -43,7 +43,7 @@ const arrCards: Cards[] = [
         healOfClass: 1.2,
         sex: 'Мужчина',
         current: 1,
-        tab: 'one',
+        tab: 'welcome',
 
     },
     {

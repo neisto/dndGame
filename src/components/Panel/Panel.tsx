@@ -30,9 +30,7 @@ export default function Panel({isRefresh, setIsRefresh, isDel, setIsDel, tab, se
     
     function ClearCard(): void {
         alert('!!!!!!!!Внимание, все карточки персонажей удалятся!!!!!!!! Нажми F5 для отмены, нажми ОК, чтобы продолжить')
-        const defaultData = DefaultCards();
-        defaultData[0].tab = 'welcome'; // Устанавливаем welcome tab для первого запуска
-        localStorage.setItem('массив', JSON.stringify(defaultData));
+        localStorage.clear()
         window.location.reload();
 
     }
