@@ -64,6 +64,8 @@ button:hover {
 
 button:active {
   border-color: transparent;
+  border: 1px solid transparent;
+  outline: 1px auto transparent;
 }
 
 button:focus {
