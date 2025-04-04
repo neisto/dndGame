@@ -29,7 +29,7 @@ export default function StartCardArr(): Cards[] {
 const arrCards: Cards[] = [
     {
         id: 1,
-        name: '',
+        name: 'Имя',
         race: 'Человек',
         racew: 'Человек',
         class: 'Воин',
@@ -48,16 +48,16 @@ const arrCards: Cards[] = [
     },
     {
         id: 2,
-        name: '',
+        name: 'Имя',
         race: 'Гомункул',
         racew: 'Человек',
         class: 'Бард',
         health: 1,
         defence: 8,
-        Streng: 2,
-        Agility: 2,
-        Intelligence: 2,
-        Charism: 2,
+        Streng: 1,
+        Agility: 1,
+        Intelligence: 1,
+        Charism: 1,
         def: '8',
         healOfClass: 1.2,
         sex: 'Мужчина',
@@ -67,7 +67,7 @@ const arrCards: Cards[] = [
     },
     {
         id: 3,
-        name: '',
+        name: 'Имя',
         race: 'Урукхай',
         racew: 'Вампиресса',
         class: 'Бардесса',
@@ -85,7 +85,7 @@ const arrCards: Cards[] = [
     },
     {
         id: 4,
-        name: '',
+        name: 'Имя',
         race: 'Гоблин',
         racew: 'Человек',
         class: 'Плут',
