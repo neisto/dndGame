@@ -25,7 +25,32 @@
     transform: scale(1.2);
 
   }
-  
+
+  .buttonInfo {
+    width: 165px;
+    height: 169px;
+    background: url('../Panel/img/save.png') center/cover no-repeat;
+    position: relative;
+    top: -37px;
+    left: -45px;
+    position: fixed;
+    top: 720px;
+    left: 47px;
+    z-index: 999;
+    transform: scale(-1, 1);
+    transition: 1s;
+} 
+
+.buttonInfo:focus{
+  outline: none;
+  border: none;
+}
+
+.buttonInfo:active{
+  outline: none;
+  border: none;
+}
+
   .del {
     width: 146px;
     height: 127px;
@@ -70,22 +95,6 @@
     background: linear-gradient(to top left, rgba(40, 43, 23, 0.623), rgba(121, 112, 101, 0.815));
   }
 
-  .buttonInfo {
-    width: 170px;
-    height: 137px;
-    background: url('../Panel/img/save.png') center/cover no-repeat;
-    position: relative;
-    top: -37px;
-    left: -45px;
-    position: fixed;
-    top: 780px;
-    left: 47px;
-    z-index: 999;
-    transform: scale(-1, 1);
-    transition: 1s;
-    background-color: transparent;
-
-} 
 
 .buttonInfo:hover {
     transform: scale(-1.2, 1.2);

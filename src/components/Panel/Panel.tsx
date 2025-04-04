@@ -86,8 +86,7 @@ export default function Panel({isRefresh, setIsRefresh, isDel, setIsDel, tab, se
                             )}
                         </li>
                         <li onMouseEnter={handleMouseEnterInf} onMouseLeave={handleMouseLeaveInf}>
-                            <button onClick={InfoOn}>
-                                <div className={classes.buttonInfo}></div>
+                            <button onClick={InfoOn} className={classes.buttonInfo}>
                             </button>
                             {inf && tab === 'one' && (
                                 <div className={`${classes.popup} ${classes.popInf}`}>

@@ -53,23 +53,18 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 0px solid transparent;
   background-color: transparent;
   transition: transparent 0.25s;
 }
 
-button:hover {
-  border-color: transparent;
+button:focus {
+  outline: none;
 }
 
 button:active {
-  border-color: transparent;
-  border: 1px solid transparent;
-  outline: 1px auto transparent;
-}
-
-button:focus {
-  outline: 1px auto transparent;
+  outline: none;
+  border: none;
 }
 
 /* 
