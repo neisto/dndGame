@@ -81,7 +81,7 @@ export default function Panel({isRefresh, setIsRefresh, isDel, setIsDel, tab, se
                             </button>)}
                             {isDel && tab === 'one' &&  (
                                 <div className={`${classes.popup} ${classes.popDel}`}>
-                                  Начать заного
+                                  Начать заново
                                 </div>
                             )}
                         </li>
