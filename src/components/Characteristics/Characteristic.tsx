@@ -1,5 +1,5 @@
 import classes from '../Characteristics/Characteristic.module.css'
-import { useState, useRef, use } from 'react';
+import { useState, useRef } from 'react';
 import RandomChar from '../RandomCharacteristic'
 import DiceButton from '../DiceButton/DiceButton';
 import allData from '../info/allData';
@@ -25,8 +25,7 @@ export default function Characteristics({characteristicName, indexPlayer, isRace
     
     //отправка в локал сторадж модификаторов
     function toStorageModify():void {
-                    const data = JSON.parse(localStorage.getItem('массив') || '[]');
-
+        const data = JSON.parse(localStorage.getItem('массив') || '[]');
         characteristicName === "Streng" ? data[indexPlayer].Smod = charModifyValue : false
         characteristicName === "Agility" ? data[indexPlayer].Amod = charModifyValue : false
         characteristicName === "Intelligence" ? data[indexPlayer].Imod = charModifyValue : false
