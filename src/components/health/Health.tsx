@@ -50,6 +50,8 @@ export default function Health({ indexPlayer }: HealthProps): React.ReactElement
     localStorage.setItem('массив', JSON.stringify(tstCrd));
 
     setCardHealth(finalHealth);
+    window.location.reload();
+
   }
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
