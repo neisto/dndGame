@@ -50,6 +50,8 @@ export default function Characteristics({characteristicName, indexPlayer, isRace
         characteristicName === "Intelligence" ? setCharModifyValue(currentChar[1] + bonusModifyByRace()[2]) : false
         characteristicName === "Charism" ? setCharModifyValue(currentChar[1] + bonusModifyByRace()[3]) : false
         localStorage.setItem('массив', JSON.stringify(data))
+        window.location.reload();
+
     }
 
     //функция подсчета модификатора, в зависимости от рассы (вернет сила, ловкость, интеллект, харизму) в этой последовательности
