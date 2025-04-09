@@ -315,4 +315,17 @@ body {
     top: -5px;
     left: 0;
   }
-  
+
+  .popUp{
+    width: 270px;
+    padding: 10px;
+    position: absolute;
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.384), rgba(121, 112, 101, 0.61));
+    border-radius: 15px;
+    border: solid 2px rgba(34, 15, 15, 0.192);
+    box-shadow: 3px 10px 20px rgb(0, 0, 0), -5px -10px 20px rgb(0, 0, 0);
+    z-index: 999;
+    top: 200px;
+    left: -70px;
+}
+    

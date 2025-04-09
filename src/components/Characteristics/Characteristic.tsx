@@ -1,5 +1,5 @@
 import classes from '../Characteristics/Characteristic.module.css'
-import { useState, useRef } from 'react';
+import { useState, useRef, use } from 'react';
 import RandomChar from '../RandomCharacteristic'
 import DiceButton from '../DiceButton/DiceButton';
 import allData from '../info/allData';
@@ -15,6 +15,13 @@ export default function Characteristics({characteristicName, indexPlayer, isRace
     const inpChar = useRef<HTMLInputElement>(null);
     const [charValue, setCharValue] = useState<any>(JSON.parse(localStorage.getItem('массив') || '[]')[indexPlayer][characteristicName]);
     const [charModifyValue, setCharModifyValue] = useState<any>(Math.floor((charValue-10)/2)+bonusModifyByRacetoDisplay());
+    const [popUpInput, setPopUpInput] = useState(false)
+    const [popUpRandomButton, setPopUpRandomButton] = useState(false)
+    const [popCount, setPopCount] = useState(true)
+    const [popCountInp, setPopCountInp] = useState(true)
+
+    
+    
     
     //отправка в локал сторадж модификаторов
     function toStorageModify():void {
@@ -35,8 +42,6 @@ export default function Characteristics({characteristicName, indexPlayer, isRace
         const data = JSON.parse(localStorage.getItem('массив') || '[]');
 
         setCharValue(currentChar[0].toString());
-
-
         
         //отрисовка Характеристики
         characteristicName === "Streng" ? data[indexPlayer].Streng = currentChar[0].toString() : false
@@ -149,12 +154,37 @@ export default function Characteristics({characteristicName, indexPlayer, isRace
 
     }
 }
+    function handleMouseEnter():void {
+        setPopUpInput(true)
+    }
+
+    function handleMouseLeave():void {
+        setPopUpInput(false)
+        setPopCountInp(false)
+    }
+
+    function handleMouseEnter1():void {
+        setPopUpRandomButton(true)
+    }
+
+    function handleMouseLeave1():void {
+        setPopUpRandomButton(false)
+        setPopCount(false)
+    }   
 
     
     return (
             <ul className={classes.charUl}>
-                <li onClick={handleButtonClick} className={classes.dices_char}><DiceButton ></DiceButton></li>
-                <li><input ref={inpChar} className={classes.inputChar} style={{color: 'white'}} type="text" onKeyPress={handleKeyPress}/></li>
+                <div style={{position: 'relative'}}>
+                    { popUpRandomButton && popCount && (<div className={`${classes.popUp} ${classes.popUpChar}`}>Выбросить случайное значение на костях</div>)}
+                    <li onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}  onClick={handleButtonClick} className={classes.dices_char}><DiceButton ></DiceButton></li>
+                </div>
+
+                <div style={{position: 'relative'}}>
+                    { popUpInput && popCountInp && (<div className={`${classes.popUp} ${classes.popUpCharInp}`}>Введите результат броска кубика</div>)}
+                    <li><input onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} ref={inpChar} className={classes.inputChar} style={{color: 'white'}} type="text" onKeyPress={handleKeyPress}/></li>
+                </div>
+
                 <li className={`${classes.box} ${classes.characteristicsBox} `}><p>{charValue}</p></li>  
 
                 {characteristicName === "Streng" && (

@@ -1,6 +1,6 @@
 .healthRandomButton {
     position: absolute;
-    left: 335px;
+    left: 309px;
     top: 330px;
   }
 
@@ -20,7 +20,7 @@
     position: absolute;
     top: 268px;
     z-index: 999;
-    left: 362px;
+    left: 376px;
 }
 
 .txt_health {
@@ -40,7 +40,7 @@
     height: 23px;
     position: absolute;
     background-color: #a4a2a266;
-    left: 462px;
+    left: 438px;
     top: 336px;
     color: white;
   }
@@ -74,3 +74,31 @@
     font-style: normal;
     color: black000;
   }
+
+  .popUp{
+    padding: 10px;
+    position: absolute;
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.5), rgba(121, 112, 101, 0.63));
+    border-radius: 15px;
+    border: solid 2px rgba(34, 15, 15, 0.192);
+    box-shadow: 3px 10px 20px rgb(0, 0, 0), -5px -10px 20px rgb(0, 0, 0);
+    z-index: 999;
+  }
+
+  .popUpChar {
+    top: 261px;
+    left: 479px;
+    width: 200px;
+}
+
+.popUpCharInp {
+    top: 370px;
+    left: 95px;
+    width: 200px;
+}
+
+.popupCharShield {
+    top: 55px;
+    left: -288px;
+    width: 288px;
+}

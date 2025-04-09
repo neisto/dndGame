@@ -131,7 +131,6 @@ function App() {
 
                 {
                   tab === 'one' && (
-                    // <Card isRace={isRace} indexPlayer={indexPlayer} numCurrentPlayer={numCurrentPlayer} setindexPlayer={setindexPlayer}></Card>
                     <Card isRace={isRace} indexPlayer={indexPlayer} numCurrentPlayer={numCurrentPlayer} ></Card>
 
                   )

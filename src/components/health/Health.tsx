@@ -22,6 +22,12 @@ export default function Health({ indexPlayer }: HealthProps): React.ReactElement
   const inpHealth = useRef<HTMLInputElement>(null);
   const [inputValue, setInputValue] = useState<string>(indexPlayerData.def.toString());
   const [curHealthOfClass, _setCurHealthOfClass] = useState<number>(indexPlayerData.healOfClass);
+  const [popUpInput, setPopUpInput] = useState(false)
+  const [popUpRandomButton, setPopUpRandomButton] = useState(false)
+  const [popCount, setPopCount] = useState(true)
+  const [popCountInp, setPopCountInp] = useState(true)
+  const [popUpShield, setPopUpShield] = useState(false)
+  const [popCountShield, setPopCountShield] = useState(true)
   
   // Внести здоровье вручную
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>): void => {
@@ -66,11 +72,40 @@ export default function Health({ indexPlayer }: HealthProps): React.ReactElement
     }
   };
 
+  function handleMouseEnter():void {
+    setPopUpInput(true)
+}
+
+function handleMouseLeave():void {
+    setPopUpInput(false)
+    setPopCountInp(false)
+}
+
+function handleMouseEnter1():void {
+    setPopUpRandomButton(true)
+}
+
+function handleMouseLeave1():void {
+    setPopUpRandomButton(false)
+    setPopCount(false)
+}   
+function handleMouseEnterShield():void {
+  setPopUpShield(true)
+}
+
+function handleMouseLeaveShield():void {
+  setPopUpShield(false)
+  setPopCountShield(false)
+}   
+
   return (
     <div>
       <div className={classes.shield}>
+      { popUpShield && popCountShield && (<div className={`${classes.popUp} ${classes.popupCharShield}`}>Гейм мастер скажет класс защиты</div>)}
         <input
           id="sketchyInput"
+          onMouseEnter={handleMouseEnterShield}
+          onMouseLeave={handleMouseLeaveShield}
           className={`${classes.rock} ${classes.shieldValue}`}
           type="text"
           value={inputValue}
@@ -81,16 +116,24 @@ export default function Health({ indexPlayer }: HealthProps): React.ReactElement
       </div>
       
       <ul className={classes.health_ul} style={{ zIndex: '500' }}>
-        <li className={classes.healthRandomButton} onClick={InitHealth}>
-          <DiceButton />
-        </li>
+       <div style={{position: 'relative'}}>
+          { popUpRandomButton && popCount && (<div className={`${classes.popUp} ${classes.popUpChar}`}>Выбросить случайное значение на костях</div>)}
+          <li  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={classes.healthRandomButton} onClick={InitHealth}>
+            <DiceButton />
+          </li>
+        </div>
         <li>
-          <input
-            ref={inpHealth}
-            className={classes.healthInput}
-            type="text"
-            onKeyPress={handleKeyPress}
-          />
+          <div style={{position: 'relative'}}>
+            { popUpInput && popCountInp && (<div className={`${classes.popUp} ${classes.popUpCharInp}`}>Введите результат броска кубика</div>)}
+            <input 
+              onMouseEnter={handleMouseEnter1} 
+              onMouseLeave={handleMouseLeave1} 
+              ref={inpHealth}
+              className={classes.healthInput}
+              type="text"
+              onKeyPress={handleKeyPress}
+            />
+          </div>
         </li>
         <li>
           <div className={classes.heart}>

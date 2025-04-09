@@ -122,3 +122,26 @@ ul {
     /* display: flex; */
     padding: 80px 0 0 50px;
 }
+
+.popUp{
+    padding: 10px;
+    position: absolute;
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.699), rgba(121, 112, 101, 0.904));
+    border-radius: 15px;
+    border: solid 2px rgba(34, 15, 15, 0.192);
+    box-shadow: 3px 10px 20px rgb(0, 0, 0), -5px -10px 20px rgb(0, 0, 0);
+    z-index: 999;
+}
+
+.popUpChar {
+    top: 11px;
+    left: -175px;
+    width: 200px;
+}
+
+.popUpCharInp {
+    top: -48px;
+    left: -215px;
+    width: 200px;
+}
+
