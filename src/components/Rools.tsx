@@ -46,7 +46,7 @@ export default function Rools(): JSX.Element {
     return (
         <section className={classes.gameSectionRools}>
             <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: 10}}>
-                <div style={{display: "flex", flexDirection: "row", alignItems: "center", gap: 15}}>
+                <div style={{display: "flex", flexDirection: "row", alignItems: "center", gap: 15, paddingRight: 100}}>
                     <div className={classes.arrow}></div>
                     <select onChange={handleSelectChange} className={classes.h_rools}>
                     {roolsInfo.map((item:any, ind:any) => (<option ref={currentTitle} className={classes.option_info} key={ind+154} >{item.title}</option>))}                                

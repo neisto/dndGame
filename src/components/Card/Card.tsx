@@ -204,7 +204,7 @@ function ChangeRaceInp(): void {
             <Health indexPlayer={indexPlayer}></Health>    
 
             <Uploader indexPlayer={indexPlayer}></Uploader>
-            { popUp && popStatus &&(<div className={classes.popUpPort}>Нажмите, чтобы загрузить свой портрет</div>)}
+            { popUp && popStatus &&(<div className={classes.popUpPort}>Нажмите на фото, чтобы загрузить свой портрет</div>)}
             {dataForPortrait[indexPlayer].newPortrait !== '' && (<Portait newPortrait={dataForPortrait[indexPlayer].newPortrait} newRace={''} sex={''}/>)}
             {dataForPortrait[indexPlayer].newPortrait === '' && currentSex === 'Мужчина' && (<Portait newRace={newRace} sex={currentSex} />)}
             {dataForPortrait[indexPlayer].newPortrait === '' && currentSex === 'Женщина' && (<Portait newRace={newRacew} sex={currentSex} />)}
