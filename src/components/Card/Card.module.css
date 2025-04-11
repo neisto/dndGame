@@ -12,6 +12,11 @@ body {
 
   }
 
+  .rockOpt {
+    background-color: var(--white);
+    color:var(--black);
+  }
+
   .rock1    {
     font-family: "Rock Salt", cursive;
     font-weight: 400;

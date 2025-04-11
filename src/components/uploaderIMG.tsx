@@ -25,6 +25,8 @@ const Uploader: React.FC<UploaderProps> = ({ indexPlayer }) => {
           console.log(data);
         }
       };
+      console.log(reader.result); // Здесь будет код изображения
+
       reader.readAsDataURL(file);
     }
     window.location.reload();
