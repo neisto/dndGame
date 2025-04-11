@@ -6,8 +6,8 @@ export default function CardInfo(): React.ReactElement<any, any> {
     
     const userRace = allData()
     const [raceInfo, setRaceInfo] = useState('Человек')
-    const [popCount, setPopCount] = useState(true)
-    const [popUp, setPopUp] = useState(false)
+    const [_popCount, setPopCount] = useState(true)
+    const [_popUp, setPopUp] = useState(false)
 
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {  
         setRaceInfo(event.target?.value)
