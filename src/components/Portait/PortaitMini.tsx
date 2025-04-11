@@ -3,14 +3,19 @@ import styles from '../Portait/Portrait.module.css'
 interface PortaitProps {
     newRace: string
     sex: string
+    newPortrait?: string
+
   }
 
-export default function PortaitMini({ newRace, sex }: PortaitProps): React.ReactElement<any, any> {
+export default function PortaitMini({ newRace, sex, newPortrait  }: PortaitProps): React.ReactElement<any, any> {
     const currentRace = newRace
 
     return (
         <>
-        
+        {newPortrait ? (
+          <div className={`${styles.portrait_mini} ${styles.players}`} style={{ background: `url(${newPortrait}) center/cover no-repeat`, backgroundSize: 250}}></div>
+        ) : (
+          <>
         {currentRace === "Человек" && sex == "Мужчина" &&(    <div className={`${styles.portrait_mini} ${styles.human1}`}></div>  )}
         
         {currentRace === "Гном" && sex == "Мужчина" &&(
@@ -114,8 +119,9 @@ export default function PortaitMini({ newRace, sex }: PortaitProps): React.React
                 )}  
         {currentRace === "Полурослая" && sex == "Женщина" &&(
             <div className={`${styles.portrait_mini} ${styles.poluw1}`}></div>)} 
-
-    </>
-    )
-
-}
+          </>
+        )}
+      </>
+    );
+  }
+  

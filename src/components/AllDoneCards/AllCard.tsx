@@ -46,8 +46,9 @@ export default function AllCard(): JSX.Element {
                     </div>
                     {item.health === 0 && (<div className={`${classes.finish_cardOff} ${classes[`levitate${index}`]}`}></div>)}
                     {item.health !== 0 && (<div className={`${classes.finish_card} ${classes[`levitate${index}`]}`}>
-                    {item.sex === 'Мужчина' && (<PortaitMini newRace={item.race} sex={item.sex} />)}
-                    {item.sex === 'Женщина' && (<PortaitMini newRace={item.racew} sex={item.sex} />)}
+                    {item.newPortrait !== '' && (<PortaitMini newPortrait={item.newPortrait} newRace={''} sex={''}/>)}
+                    {item.newPortrait === '' && item.sex === 'Мужчина' && (<PortaitMini newRace={item.race} sex={item.sex} />)}
+                    {item.newPortrait === '' && item.sex === 'Женщина' && (<PortaitMini newRace={item.racew} sex={item.sex} />)}
                         <div className={classes.informationBox}>
                             <p className={classes.informationBlocks}>{item.name}</p>
                             {/* {   item.sex === 'Женщина' && (<p className={classes.informationBlocks}>{item.racew}</p>) }

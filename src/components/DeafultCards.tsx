@@ -20,6 +20,7 @@ interface Cards {
     sex: string,
     current: number;
     tab: string;
+    newPortrait?: string;
 }
 
 
@@ -44,6 +45,7 @@ const arrCards: Cards[] = [
         sex: 'Мужчина',
         current: 1,
         tab: 'welcome',
+        newPortrait: '',
 
     },
     {
@@ -63,6 +65,7 @@ const arrCards: Cards[] = [
         sex: 'Мужчина',
         current: 1,
         tab: 'one',
+        newPortrait: '',
 
     },
     {
@@ -82,6 +85,8 @@ const arrCards: Cards[] = [
         sex: 'Женщина',
         current: 1,
         tab: 'one',
+        newPortrait: '',
+
     },
     {
         id: 4,
@@ -100,6 +105,7 @@ const arrCards: Cards[] = [
         sex: 'Мужчина',
         current: 1,
         tab: 'one',
+        newPortrait: '',
 
     },
     {
@@ -119,6 +125,7 @@ const arrCards: Cards[] = [
         sex: 'Женщина',
         current: 1,
         tab: 'welcome',
+        newPortrait: '',
 
     },
 ];

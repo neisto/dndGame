@@ -24,6 +24,9 @@
     /* box-shadow: 5px 10px 20px rgba(166, 150, 150, 0.84), -5px -10px 20px rgba(255,255,255,0.5); */
     margin-bottom: 104px;
 }
+.players {
+    /* background-size: 500px; */
+}
 
 .human {
     background: url(./img/hum.jpg)  center/cover no-repeat;
@@ -221,7 +224,7 @@
     background: url(./img/tifW.jpg)  center/cover no-repeat;
     background-size: 230px;
 }
-.gomw {
+.gomw1 {
     background: url(./img/gom.jpg)  center/cover no-repeat;
     background-size: 230px;
 }

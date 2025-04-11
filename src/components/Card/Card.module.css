@@ -86,6 +86,19 @@ body {
     }
 }
 
+.uploadWindow {
+    position: absolute;
+    top: 173px;
+    z-index: 999;
+    left: 149px;
+    opacity: -205%;
+    width: 272px;
+    height: 265px;
+    background-color: red;
+    border-radius:  50%;
+    cursor: pointer;
+}
+
 
 .cardWhenInfoOn {
     left: -185px;
@@ -378,6 +391,7 @@ body {
     left: calc(100% + 20px); /* Отступ справа от элемента на 50px */
 } 
 
+
 .popAll {
     top: 100px;
     width: 200px;
@@ -446,6 +460,32 @@ body {
     width: 270px;
 }
 
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .popUpPort {
+    left: 601px;
+    width: 350px;
+    padding: 10px;
+    position: fixed;
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.267), rgba(121, 112, 101, 0.192));
+    border-radius: 15px;
+    border: solid 2px rgba(34, 15, 15, 0.192);
+    box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.4), -5px -10px 20px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    top: 285px;
+    animation: pulse 2s infinite; /* Добавляем анимацию */
+  }
+  
 .arrow {
     width: 180px;
     height: 55px;

@@ -9,6 +9,7 @@ import Health from '../health/Health.tsx';
 import getClass from '../ClassInit.tsx';
 import Portait from '../Portait/Portrait.tsx';
 import styles from '../Characteristics/Characteristic.module.css'
+import Uploader from '../uploaderIMG.tsx';
 
 
 interface CardType {
@@ -41,14 +42,19 @@ export default function Card({indexPlayer, numCurrentPlayer, isRace}: CardType):
     const [currentSex, setCurrentSex] = useState(JSON.parse(localStorage.getItem('массив') || '[]')[indexPlayer].sex);
     const [popUpInput, setPopUpInput] = useState(false)
     const [popUpRandomButton, setPopUpRandomButton] = useState(false)
+    const [popUp, setPopUp] = useState(false)
+    const [popStatus, setPopStatus] = useState(true)
 
     
 
 //функция получает случаную рассу путем скидывая 2 кубиков D6 и сложения их результата
-    function ChangeRace(): void {
-        setCurrentRace(UserRaceInit(RandomChar()[2]))
-        setCurrentRacew(UserRaceInit(RandomChar()[2]))    
-    }
+function ChangeRace(): void {
+    setCurrentRace(UserRaceInit(RandomChar()[2]))
+    setCurrentRacew(UserRaceInit(RandomChar()[2]))    
+    const data = JSON.parse(localStorage.getItem('массив') || '[]');
+        data[indexPlayer].newPortrait = ""
+        localStorage.setItem('массив', JSON.stringify(data))
+}
 
 //функция получает рассу введенную принудительно
 function ChangeRaceInp(): void {
@@ -57,6 +63,9 @@ function ChangeRaceInp(): void {
 
     setCurrentRace(UserRaceInit(inputValuerace))
     setCurrentRacew(UserRaceInit(inputValueracew)) 
+    const data = JSON.parse(localStorage.getItem('массив') || '[]');
+    data[indexPlayer].newPortrait = ""
+    localStorage.setItem('массив', JSON.stringify(data))
 
 }
 
@@ -163,9 +172,19 @@ function ChangeRaceInp(): void {
     //         document.body.removeChild(link);
     //     }
     // }
+    function handleMouseEnter3():void {
+        setPopUp(true)
+    }
+
+    function handleMouseLeave3():void {
+        setPopUp(false)
+        setPopStatus(false)
+
+    }
+    const dataForPortrait = JSON.parse(localStorage.getItem('массив') || '[]')
     return (
         <>
-        <div className={`${classes.card} ${classes.levitate}`} ref={elementRef} id='carddd'>
+        <div className={`${classes.card} ${classes.levitate}`} ref={elementRef} id='carddd' onMouseEnter={handleMouseEnter3} onMouseLeave={handleMouseLeave3}>
             <div className={classes.characteristick_block}>
                     <div className={classes.characteristics_block}>
                         <div className={styles.char_strange}>  
@@ -182,9 +201,13 @@ function ChangeRaceInp(): void {
                         </div>
                     </div>
             </div>
-            <Health indexPlayer={indexPlayer}></Health>            
-            {currentSex === 'Мужчина' && (<Portait newRace={newRace} sex={currentSex} />)}
-            {currentSex === 'Женщина' && (<Portait newRace={newRacew} sex={currentSex} />)}
+            <Health indexPlayer={indexPlayer}></Health>    
+
+            <Uploader indexPlayer={indexPlayer}></Uploader>
+            { popUp && popStatus &&(<div className={classes.popUpPort}>Нажмите, чтобы загрузить свой портрет</div>)}
+            {dataForPortrait[indexPlayer].newPortrait !== '' && (<Portait newPortrait={dataForPortrait[indexPlayer].newPortrait} newRace={''} sex={''}/>)}
+            {dataForPortrait[indexPlayer].newPortrait === '' && currentSex === 'Мужчина' && (<Portait newRace={newRace} sex={currentSex} />)}
+            {dataForPortrait[indexPlayer].newPortrait === '' && currentSex === 'Женщина' && (<Portait newRace={newRacew} sex={currentSex} />)}
 
             <div className={classes.sketchy}>
                 <div className={classes.infoFirstBlock}>
