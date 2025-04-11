@@ -10,11 +10,13 @@ interface props {
   setTab: any;
   setIsInf: any;
   inf: any;
+  book: any;
+  setIsBook: any;
 
 }
 
 
-export default function Panel({isRefresh, setIsRefresh, isDel, setIsDel, tab, setTab, setIsInf, inf } : props): React.ReactElement<any, any> {
+export default function Panel({isRefresh, setIsRefresh, isDel, setIsDel, tab, setTab, setIsInf, inf, book, setIsBook } : props): React.ReactElement<any, any> {
 
     function Refresh(): void {
         window.location.reload();
@@ -26,6 +28,11 @@ export default function Panel({isRefresh, setIsRefresh, isDel, setIsDel, tab, se
        tab === 'one' ? setTab('info') : setTab('one')
        
   };
+
+  function rools(): void {
+      tab === 'info' ? setTab('rools') : setTab('info')
+
+  }
   
     
     function ClearCard(): void {
@@ -57,6 +64,14 @@ export default function Panel({isRefresh, setIsRefresh, isDel, setIsDel, tab, se
       
       const handleMouseLeaveInf = () => {
         setIsInf(false);
+      };
+
+      function handleMouseEnterBook() {
+        setIsBook(true) ;
+      };
+      
+      const handleMouseLeaveBook = () => {
+        setIsBook(false);
       };
 
     return (
@@ -93,8 +108,21 @@ export default function Panel({isRefresh, setIsRefresh, isDel, setIsDel, tab, se
                                   Глоссарий
                                 </div>
                               )}
+                            {inf && tab !== 'one' && (
+                                <div className={`${classes.popup} ${classes.popInf}`}>
+                                  К карточке
+                                </div>
+                              )}  
                         </li>
+                        {tab !== 'one' && (<li onMouseEnter={handleMouseEnterBook} onMouseLeave={handleMouseLeaveBook}><button onClick={rools} className={classes.buttonBook}></button></li>)}
+                        {book && tab !== 'rools' &&  (<div className={`${classes.popup} ${classes.popBook}`}>
+                            Правила игры
+                        </div>)}
+                        {book && tab === 'rools' &&  (<div className={`${classes.popup} ${classes.popBook}`}>
+                            К описанию
+                        </div>)}
                     </ul>
+                    
 
                 </menu>
             </nav>

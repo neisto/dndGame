@@ -5,10 +5,17 @@ import PortaitMini from '../Portait/PortaitMini'
 
 export default function AllCard(): JSX.Element {
   const [objDoneCards, setObjDoneCards] = useState<any[]>([])
+  //состояние подсказки под карточками
+  const [pops, setPops] = useState('клик -ХП | двойной клик +ХП')
 
   useEffect(() => {
     const cards = JSON.parse(localStorage.getItem('массив') || '[]').splice(0, 4)
     setObjDoneCards(cards)
+
+    //состояние подсказки под карточками исчезнет через:
+    setTimeout(() => {
+      setPops("")
+  }, 8000);
   }, [])
 
   // Функция для определения класса
@@ -86,7 +93,8 @@ export default function AllCard(): JSX.Element {
                             <li className={`${classes.modify} ${classes.m2}`}><div> {item.Amod} </div></li>
                             <li className={`${classes.modify} ${classes.m3}`}><div> {item.Imod} </div></li>
                             <li className={`${classes.modify} ${classes.m4}`}><div> {item.Cmod} </div></li>
-                        </ul>                    
+                        </ul> 
+                        <p className={classes.pops}>{pops}</p>                   
                     </div>)}
                 </li>
             ))}

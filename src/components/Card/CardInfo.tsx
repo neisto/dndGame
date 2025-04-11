@@ -27,11 +27,13 @@ export default function CardInfo(): React.ReactElement<any, any> {
 
     function handleMouseEnter():void {
         setPopUp(true)
+        setTimeout(() => {
+            setPopCount(false)
+        }, 3000);
     }
 
     function handleMouseLeave():void {
         setPopUp(false)
-        setPopCount(false)
     }   
 
 
@@ -40,11 +42,13 @@ export default function CardInfo(): React.ReactElement<any, any> {
             
             <section className={classes.description_block} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                    <div className={classes.description_top}>
-                   { popUp && popCount && (<div className={`${classes.popUp} ${classes.popUpChar}`}>Нажмите здесь и выберите рассу</div>)}
-                   <select onChange={handleSelectChange} className={classes.h_info}>
+                   {/* { popUp && popCount && (<div className={`${classes.popUpInf} ${classes.popUpChar}`}>Нажмите здесь и выберите рассу</div>)} */}
+                   <div style={{display: "flex", flexDirection: "row", alignItems: "center", gap: 15, position: "relative", left: -30  }}>
+                   <div className={classes.arrow1}></div>
+                    <select onChange={handleSelectChange} className={classes.h_info}>
                                 {userRace.map((item:any, ind:any) => (<option className={classes.option_info} key={ind+121} >{item.race}</option>))}                                
                     </select>   
-
+                    </div>
                     <p className={classes.description}> {descInfo()} </p>
                     <h3 className={classes.h_info1}>Особенности рассы</h3>
                     <p className={classes.description}> {specInfo()} </p>

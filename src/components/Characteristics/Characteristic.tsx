@@ -17,8 +17,7 @@ export default function Characteristics({characteristicName, indexPlayer, isRace
     const [charModifyValue, setCharModifyValue] = useState<any>(Math.floor((charValue-10)/2)+bonusModifyByRacetoDisplay());
     const [popUpInput, setPopUpInput] = useState(false)
     const [popUpRandomButton, setPopUpRandomButton] = useState(false)
-    const [popCount, setPopCount] = useState(true)
-    const [popCountInp, setPopCountInp] = useState(true)
+
 
     
     
@@ -159,7 +158,7 @@ export default function Characteristics({characteristicName, indexPlayer, isRace
 
     function handleMouseLeave():void {
         setPopUpInput(false)
-        setPopCountInp(false)
+
     }
 
     function handleMouseEnter1():void {
@@ -168,19 +167,19 @@ export default function Characteristics({characteristicName, indexPlayer, isRace
 
     function handleMouseLeave1():void {
         setPopUpRandomButton(false)
-        setPopCount(false)
+
     }   
 
     
     return (
             <ul className={classes.charUl}>
                 <div style={{position: 'relative'}}>
-                    { popUpRandomButton && popCount && (<div className={`${classes.popUp} ${classes.popUpChar}`}>Выбросить случайное значение на костях</div>)}
+                    { popUpRandomButton &&(<div className={classes.popUp}>Выбросить случайное значение на костях</div>)}
                     <li onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}  onClick={handleButtonClick} className={classes.dices_char}><DiceButton ></DiceButton></li>
                 </div>
 
                 <div style={{position: 'relative'}}>
-                    { popUpInput && popCountInp && (<div className={`${classes.popUp} ${classes.popUpCharInp}`}>Введите результат броска кубика</div>)}
+                    { popUpInput &&(<div className={classes.popUp}>Введите результат броска кубика</div>)}
                     <li><input onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} ref={inpChar} className={classes.inputChar} style={{color: 'white'}} type="text" onKeyPress={handleKeyPress}/></li>
                 </div>
 

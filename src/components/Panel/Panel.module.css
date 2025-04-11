@@ -39,12 +39,32 @@
     transition: 1s;
 }
 
-uttonInfo:focus{
+.buttonBook {
+    width: 155px;
+    height: 155px;
+    background: url('./img/book.png') center/cover no-repeat;
+    position: relative;
+    top: 63px;    left: -45px;
+    position: fixed;
+    top: 63px;
+    left: 47px;
+    z-index: 999;
+    transition: 1s;
+    transform: scale(-1, 1);
+
+}
+
+.buttonBook:hover {
+    transform: scale(-1.2, 1.2);
+
+}
+
+.buttonInfo:focus{
     outline: none;
     border: none;
 }
 
-  uttonInfo:active{
+.buttonInfo:active{
     outline: none;
     border: none;
 }
@@ -80,12 +100,12 @@ uttonInfo:focus{
 .popRef {
     top: 120px;
     width: 200px;
-    background: linear-gradient(to top left, rgba(40, 43, 23, 0.075), rgba(121, 112, 101, 0.199));
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.801), rgba(121, 112, 101, 0.459));
 }
 .popDel {
     top: 340px;
     width: 200px;
-    background: linear-gradient(to top left, rgba(40, 43, 23, 0.623), rgba(121, 112, 101, 0.815));
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.801), rgba(121, 112, 101, 0.459));
 }
 .buttonInfo:hover {
     transform: scale(-1.2, 1.2);
@@ -94,7 +114,14 @@ uttonInfo:focus{
 
 .popInf {
     top: 570px;
-    width: 200px;
-    background: linear-gradient(to top left, rgba(40, 43, 23, 0.075), rgba(121, 112, 101, 0.199));
+    width: auto;
+    text-wrap: nowrap;
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.801), rgba(121, 112, 101, 0.459));
 }
 
+.popBook {
+    top: -95px;
+    width: auto;
+    text-wrap: nowrap;
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.801), rgba(121, 112, 101, 0.459));
+}

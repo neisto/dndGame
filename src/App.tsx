@@ -9,6 +9,7 @@ import classes from './components/Card/Card.module.css'
 import DefaultCards from './components/DeafultCards.tsx' 
 import AnimButton from './components/animButton/animButton.tsx';
 import CardInfo from './components/Card/CardInfo.tsx';
+import Rools from './components/Rools.tsx'
 
 
 function App() {
@@ -66,6 +67,9 @@ function App() {
   // состояние попап кнопки инфо
   const [inf, setIsInf] = useState(false)
 
+  // состояние попап кнопки правила
+  const [book, setIsBook] = useState(false)
+
   //наведение на кнопку вызовет всплывабщее окно
   const [isDel, setIsDel] = useState(false);
 
@@ -100,7 +104,7 @@ function App() {
       )}
       {
       tab !== 'two' &&
-       (<Panel isRefresh={isRefresh} setIsRefresh={setIsRefresh} setIsDel={setIsDel} isDel={isDel} tab={tab} setTab={setTab} inf={inf} setIsInf={setIsInf}></Panel>)
+       (<Panel isRefresh={isRefresh} book={book} setIsBook={setIsBook} setIsRefresh={setIsRefresh} setIsDel={setIsDel} isDel={isDel} tab={tab} setTab={setTab} inf={inf} setIsInf={setIsInf}></Panel>)
       }
 
       {
@@ -170,6 +174,11 @@ function App() {
                         Показать весь отряд
                       </div>
                       )}
+                {isAll && tab !== 'one'  && (
+                  <div className={`${classes.popup} ${classes.popAll}`}>
+                        К карточке
+                      </div>
+                      )}
               </div>
 
                 {
@@ -188,6 +197,9 @@ function App() {
         </div>)}
         {tab === 'info' && (
           <CardInfo></CardInfo>
+      )}
+              {tab === 'rools' && (
+          <Rools></Rools>
       )}
 
         

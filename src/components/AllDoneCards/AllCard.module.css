@@ -281,3 +281,21 @@
 .classesImg4 {
     background: url(../img/bard.jpg) center/cover no-repeat;
 }
+
+.pops {
+    font-family: "Rock Salt", cursive;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    animation: pops 2s infinite; 
+    max-width: 290px;
+
+}
+
+@keyframes pops {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+}

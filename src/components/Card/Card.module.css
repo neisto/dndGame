@@ -44,6 +44,18 @@ body {
 
 }
 
+.gameSectionRools {
+    width: 100%;
+    height: 100%;
+    background: url(../img/rools.jpg) center/cover no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* padding: 30px 0 0 0; */
+
+}
+
 .card {
     width: 499px;
     position: relative;
@@ -119,18 +131,17 @@ body {
 }
 
 .h_info {
-    width: 676px;
+    width: 450px;
     font-size: 4rem;
     font-family: "Rock Salt", cursive;
     color: #fff;
-    margin: 0;
     text-align: center;
     height: 137px;
-    padding: 0;
     border: transparent;
     background-color: transparent;
     background: transparent;
     padding: 0 0 0 40px;
+    cursor: pointer;
 }
 
 .option_info {
@@ -162,6 +173,94 @@ body {
     font-family: "Rock Salt", cursive;
     text-align: center;
     margin: 0;
+}
+
+.h_rools {
+    font-size: 3rem;
+    font-family: "Rock Salt", cursive;
+    /* color: #000000; */
+    text-align: unset;
+    height: 137px;
+    border: transparent;
+    background-color: transparent;
+    background: transparent;
+    cursor: pointer;
+    
+}
+
+
+.p_rools {
+    /* font-size: 22px; */
+    border-radius: 13px;
+    color: white;
+    width: 1400px;
+    height: auto;
+    background-color: transparent;
+    font-family: "Rock Salt", cursive;
+    text-align: center;
+    padding: 0 0 0 170px;
+    margin: 0;
+
+}
+.p_rools1 {
+    font-size: 22px;
+}
+
+.p_rools2 {
+    font-size: 24px;
+}
+
+
+.diceImg {
+    width: 690px;
+    height: 132px;
+    background: url('../img/dices.png') center/cover no-repeat;
+    margin-left: 100px;
+}
+
+.racesIMG {
+    width: 1263px;
+    height: 390px;
+    background:  url('/src/components/img/racesClasses.png') center/cover no-repeat;
+    margin-left: 100px;
+    margin-top: 100px;
+    opacity: 77%;
+}
+
+.weaponsIMG {
+    width: 1063px;
+    height: 400px;
+    background:  url('/src/components/img/weapons.png') center/cover no-repeat;
+    margin-left: 100px;
+    margin-top: 100px;
+    opacity: 77%;
+}
+
+.DNDIMG {
+    width: 1063px;
+    height: 400px;
+    background:  url('/src/components/img/DND.png') center/cover no-repeat;
+    margin-left: 100px;
+    margin-top: 100px;
+    opacity: 77%;
+}
+
+.defenceIMG {
+    width: 1263px;
+    height: 490px;
+    background:  url('/src/components/img/defensIMG.png') center/cover no-repeat;
+    margin-left: 100px;
+    margin-top: 100px;
+    opacity: 77%;
+}
+
+.charIMG {
+    width: 1263px;
+    height: 390px;
+    background:  url('/src/components/img/charIMG.png') center/cover no-repeat;
+    margin-left: 100px;
+    margin-top: 100px;
+    opacity: 77%;
 }
 
 .finish_card {
@@ -280,7 +379,7 @@ body {
 } 
 
 .popAll {
-    top: 120px;
+    top: 100px;
     width: 200px;
     padding: 10px;
     position: absolute;
@@ -298,7 +397,7 @@ body {
     width: 200px;
     padding: 10px;
     position: absolute;
-    background: linear-gradient(to top left, rgba(40, 43, 23, 0.5), rgba(121, 112, 101, 0.63));
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.267), rgba(121, 112, 101, 0.192));
     border-radius: 15px;
     border: solid 2px rgba(34, 15, 15, 0.192);
     box-shadow: 3px 10px 20px rgb(0, 0, 0), -5px -10px 20px rgb(0, 0, 0);
@@ -316,16 +415,67 @@ body {
     left: 0;
   }
 
-  .popUp{
-    width: 270px;
+.popUpInf{
+    width: 170px;
     padding: 10px;
     position: absolute;
-    background: linear-gradient(to top left, rgba(40, 43, 23, 0.384), rgba(121, 112, 101, 0.61));
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.075), rgba(99, 90, 80, 0.425));
     border-radius: 15px;
     border: solid 2px rgba(34, 15, 15, 0.192);
     box-shadow: 3px 10px 20px rgb(0, 0, 0), -5px -10px 20px rgb(0, 0, 0);
     z-index: 999;
     top: 200px;
-    left: -70px;
+    left: 580px;
 }
-    
+
+.popUp{
+    left: 600px;
+    width: 335px;
+    padding: 10px;
+    position: fixed;
+    background: linear-gradient(to top left, rgba(40, 43, 23, 0.068), rgba(121, 112, 101, 0.192));
+    border-radius: 15px;
+    border: solid 2px rgba(34, 15, 15, 0.192);
+    box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.4), -5px -10px 20px rgba(0, 0, 0, 0.06);   
+    z-index: 999;
+    top: 719px;
+    color: white;
+}
+
+.popUpCharInp {
+    width: 270px;
+}
+
+.arrow {
+    width: 180px;
+    height: 55px;
+    background: url("/src/components/img/arr.png") center/cover no-repeat;
+    animation: arrow 2s infinite; 
+    margin-top: 10px;
+}
+
+@keyframes arrow {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(15px);
+    }
+}
+
+.arrow1 {
+    width: 130px;
+    height: 30px;
+    background: url("/src/components/img/arr1.png") center/cover no-repeat;
+    animation: arrow1 2s infinite; 
+    margin-top: 30px;
+}
+
+@keyframes arrow1 {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(15px);
+    }
+}

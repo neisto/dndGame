@@ -39,6 +39,8 @@ export default function Card({indexPlayer, numCurrentPlayer, isRace}: CardType):
     const arrNumberPlayers: number[] = [0,1,2,3,4]
     const sex = useRef<HTMLOptionElement>(null);
     const [currentSex, setCurrentSex] = useState(JSON.parse(localStorage.getItem('массив') || '[]')[indexPlayer].sex);
+    const [popUpInput, setPopUpInput] = useState(false)
+    const [popUpRandomButton, setPopUpRandomButton] = useState(false)
 
     
 
@@ -124,6 +126,21 @@ function ChangeRaceInp(): void {
         }
     }
 
+    function handleMouseEnter():void {
+        setPopUpInput(true)
+    }
+    
+    function handleMouseLeave():void {
+        setPopUpInput(false)
+    }
+    
+    function handleMouseEnter1():void {
+        setPopUpRandomButton(true)
+    }
+    
+    function handleMouseLeave1():void {
+        setPopUpRandomButton(false)
+    } 
 
     const elementRef = useRef<HTMLDivElement>(null);
     //скрин карточки через библиотеку html2canvas   
@@ -239,8 +256,10 @@ function ChangeRaceInp(): void {
                             </select>   
 
                         </li>
-                        <li><input ref={inpraceChar} onKeyPress={() => ChangeRaceInp()} className={`${classes.species_inp} ${classes.informationBlocks}`} type='text' /></li>
-                        <li className={classes.species_btn} onClick={() => ChangeRace()}><DiceButton></DiceButton></li>
+                        <li><input ref={inpraceChar}  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onKeyPress={() => ChangeRaceInp()} className={`${classes.species_inp} ${classes.informationBlocks}`} type='text' /></li>
+                        { popUpInput && (<div className={`${classes.popUp} ${classes.popUpCharInp}`}>Введите результат броска кубика</div>)}
+                        { popUpRandomButton &&(<div className={`${classes.popUp} ${classes.popUpChar}`}>Выбросить случайное значение на костях</div>)}
+                        <li className={classes.species_btn} onClick={() => ChangeRace()} onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}><DiceButton></DiceButton></li>
                     </ul>)}
 
                     {currentSex === 'Женщина' && (
@@ -254,8 +273,10 @@ function ChangeRaceInp(): void {
                         </select>   
 
                         </li>
-                        <li><input ref={inpraceCharW} onKeyPress={() => ChangeRaceInp()} className={`${classes.species_inp} ${classes.informationBlocks}`} type='text' /></li>
-                        <li className={classes.species_btn} onClick={() => ChangeRace()}><DiceButton></DiceButton></li>
+                        <li><input ref={inpraceCharW} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onKeyPress={() => ChangeRaceInp()} className={`${classes.species_inp} ${classes.informationBlocks}`} type='text' /></li>
+                        { popUpInput && (<div className={`${classes.popUp} ${classes.popUpCharInp}`}>Введите результат броска кубика</div>)}
+                        { popUpRandomButton && (<div className={`${classes.popUp} ${classes.popUpChar}`}>Выбросить случайное значение на костях</div>)}
+                        <li className={classes.species_btn} onClick={() => ChangeRace()} onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}><DiceButton></DiceButton></li>
                     </ul>)}
 
             </div>
