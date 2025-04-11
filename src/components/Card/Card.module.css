@@ -15,6 +15,7 @@ body {
   .rockOpt {
     background-color: var(--white);
     color:var(--black);
+    border: 1px;
   }
 
   .rock1    {
