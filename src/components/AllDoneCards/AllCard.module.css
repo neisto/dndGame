@@ -181,7 +181,7 @@
 
 .informationBlocks{
     position: absolute;
-    width: 230px;
+    min-width: 300px;
     height: 30px;
     border-color: rgb(43, 43, 43);
     border-width: 5px;

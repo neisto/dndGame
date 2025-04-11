@@ -30,7 +30,7 @@ export default function StartCardArr(): Cards[] {
 const arrCards: Cards[] = [
     {
         id: 1,
-        name: 'Евгений Лебедев (Разработчик)',
+        name: 'neisto (creator)',
         race: 'Урукхай',
         racew: 'Человек',
         class: 'Создатель приложения',
