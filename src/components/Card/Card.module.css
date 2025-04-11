@@ -17,6 +17,31 @@ body {
     color:var(--black);
   }
 
+  .rockOpt:active {
+    background-color: #da0000;
+  }
+
+  .rockOpt:focus {
+    background-color: #da0000;
+  }
+
+  option:active {
+    background-color: #da0000;
+
+  }
+
+  option:focus {
+    background-color: #da0000;
+
+  }
+
+/* 
+  select:focus {
+    background-color: #6d000044;
+
+  } */
+
+
   .rock1    {
     font-family: "Rock Salt", cursive;
     font-weight: 400;

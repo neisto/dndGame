@@ -224,7 +224,7 @@ function ChangeRaceInp(): void {
                         </option>
                     ) :  <option 
                     ref={selectPlayer}
-                    className={classes.rock}
+                    className={classes.rockOpt}
                     key={index + 1}
                     value={i}
                     >
@@ -236,13 +236,13 @@ function ChangeRaceInp(): void {
                 <select onChange={handleSelectSex} className={`${classes.informationBlocks} ${classes.name}`} value={currentSex}>
                         <option
                         ref={sex}
-                        className={classes.rock}
+                        className={classes.rockOpt}
                         >
                         Мужчина
                         </option>
                     ) :  <option 
                     ref={sex}
-                    className={classes.rock}
+                    className={classes.rockOpt}
                     >
                         Женщина
                     </option>
@@ -273,7 +273,7 @@ function ChangeRaceInp(): void {
                         <li>
                             
                             <select ref={selectChar} onChange={handleSelectChange} className={`${classes.species_select} ${classes.informationBlocks}`}>
-                                    <option value='Кто вы?'>Кто вы?</option>
+                                    <option className={classes.rockOpt} value='Кто вы?'>Кто вы?</option>
                                     {currentRace.map((item, ind) => (<option className={classes.rockOpt} key={ind+11} value={item.race}>{item.race}</option>))}
                                     
                             </select>   
@@ -291,7 +291,7 @@ function ChangeRaceInp(): void {
                         <li>
 
                         <select ref={selectChar} onChange={handleSelectChangeW} className={`${classes.species_select} ${classes.informationBlocks}`}>
-                                    <option value='Кто вы?'>Кто вы?</option>
+                                    <option className={classes.rockOpt} value='Кто вы?'>Кто вы?</option>
                                     {currentRacew.map((item, ind) => (<option className={classes.rockOpt} key={ind+21} value={item.racew}>{item.racew}</option>))}                               
                         </select>   
 
